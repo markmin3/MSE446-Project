@@ -1,0 +1,7 @@
+.venv/
+.env/
+spotify_augment_progress.csv
+.cache
+.python-version
+__pycache__/
+.ipynb_checkpoints/

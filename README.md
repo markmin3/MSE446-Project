@@ -31,7 +31,7 @@ The project currently includes:
 - `linear_regression_model.py`: linear classifier baseline (RidgeClassifier, genre)
 - `random_forest_model.py`: random forest classifier + regressor
 - `svm_model.py`: SVM-RBF classifier (genre)
-- `xgboost_model.py`: XGBoost regressor (popularity)
+- `xgboost_model.py`: XGBoost classifier (genre)
 - `high_performance_genre_pipeline.py`: tuned XGBoost classifier with Top-3 evaluation
 
 ## Setup
@@ -128,7 +128,7 @@ Outputs:
 
 Note: Full `spotify_remapped.csv` can be slow for SVM-RBF.
 
-### 5) XGBoost Regression (Popularity)
+### 5) XGBoost (Genre Classification)
 
 ```bash
 uv run python xgboost_model.py --data spotify_remapped.csv
@@ -136,9 +136,9 @@ uv run python xgboost_model.py --data spotify_remapped.csv
 
 Outputs:
 
-- RMSE
-- MAE
-- R^2
+- Accuracy
+- Precision / recall / F1 per class
+- Macro and weighted averages
 
 ### 6) High-Performance XGBoost Genre Pipeline (Top-1 + Top-3)
 

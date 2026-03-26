@@ -26,7 +26,7 @@ def main() -> None:
     model = Pipeline(
         steps=[
             ("scaler", StandardScaler()),
-            ("svc", SVC(kernel="rbf", C=3.0, gamma="scale")),
+            ("svc", SVC(kernel="rbf", C=3.0, gamma="scale", class_weight="balanced")),
         ]
     )
     model.fit(x_train, y_train)

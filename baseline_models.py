@@ -93,7 +93,7 @@ def run_logistic_regression(data: pd.DataFrame, test_size: float, random_state: 
     clf = Pipeline(
         steps=[
             ("preprocess", preprocessor),
-            ("model", LogisticRegression(max_iter=2000, solver="lbfgs")),
+            ("model", LogisticRegression(max_iter=2000, solver="lbfgs", class_weight="balanced")),
         ]
     )
 

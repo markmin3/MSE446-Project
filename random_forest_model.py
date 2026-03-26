@@ -28,7 +28,7 @@ def main() -> None:
         data, test_size=args.test_size, random_state=args.random_state
     )
     clf = RandomForestClassifier(
-        n_estimators=300, random_state=args.random_state, n_jobs=-1
+        n_estimators=300, random_state=args.random_state, n_jobs=-1, class_weight="balanced"
     )
     clf.fit(x_train_c, y_train_c)
     preds_c = clf.predict(x_test_c)
